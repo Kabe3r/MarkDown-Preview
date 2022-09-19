@@ -1,0 +1,69 @@
+@use "../util" as e;
+
+.mde-header {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: var(--mde-header-background);
+
+	.mde-tabs {
+		display: flex;
+		align-items: center;
+		padding: 0 e.rem(15) 0 0;
+
+		button {
+			letter-spacing: e.rem(2);
+			font-size: e.rem(14);
+			margin-inline: e.rem(3);
+			font-weight: 500;
+		}
+		.selected {
+			border: e.rem(1) solid var(--mde-border);
+			padding: e.rem(6);
+		}
+	}
+
+	.mde-header-group {
+		display: flex;
+		padding: 0 e.rem(20) 0 0;
+
+		li {
+			list-style: none;
+			padding-inline: e.rem(7);
+
+			.svg-icon {
+				height: e.em(16);
+			}
+		}
+	}
+}
+
+.mde-textarea-wrapper {
+	height: auto;
+	background-color: var(--mde-header-background);
+	border-left: e.rem(1) solid var(--mde-border);
+}
+
+.mde-text {
+	width: 100%;
+	border: e.rem(1) solid var(--mde-border);
+	padding: e.rem(10);
+	font-size: clamp(e.rem(14), e.rem(10) + 2vw, e.rem(16));
+	line-height: e.rem(30);
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.image-tip {
+	display: block;
+	padding: e.rem(6);
+	font-size: e.rem(11);
+	font-weight: 500;
+	letter-spacing: e.rem(2);
+	background-color: var(--mde-header-background);
+	border-bottom: e.rem(1) solid var(--mde-border);
+	border-left: e.rem(1) solid var(--mde-border);
+	cursor: pointer;
+
+	input {
+		display: none;
+	}
+}

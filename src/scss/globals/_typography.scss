@@ -1,0 +1,18 @@
+@use '../util/' as t;
+
+body {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 2rem;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h3 {
+      font-size: clamp(t.rem(14), t.rem(16) + 2vw, t.rem(25));
+}
+
+h4 {
+      font-size: clamp(t.rem(14), t.rem(16) + 2vw, t.rem(20));
+      font-weight: 400;
+      line-height: t.rem(17);  
+}

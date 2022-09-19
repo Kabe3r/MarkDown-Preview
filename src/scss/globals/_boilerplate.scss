@@ -1,0 +1,36 @@
+html {
+	box-sizing: border-box;
+	font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+button {
+	text-transform: capitalize;
+}
+
+button {
+	background: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+button:focus {
+	outline: none;
+}

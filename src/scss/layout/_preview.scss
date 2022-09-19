@@ -1,0 +1,72 @@
+@use "../util/" as p;
+
+.mde-preview {
+	margin: p.rem(14);
+	font-size: clamp(p.rem(12), p.rem(10) + 2vw, p.rem(16));
+
+	li {
+		margin-left: p.rem(16);
+	}
+
+	blockquote {
+		margin: 0;
+
+		p {
+			font-style: italic;
+			padding: p.rem(11) p.rem(16) p.rem(16);
+		}
+	}
+
+	img {
+		height: auto;
+		max-width: 100%;
+	}
+	a {
+		color: var(--add-active);
+		text-transform: capitalize;
+	}
+
+	pre {
+		padding: p.rem(10) p.rem(13) p.rem(13);
+		word-wrap: break-all;
+		word-wrap: break-word;
+		line-height: p.rem(32);
+		background: var(--pre-background);
+		background-size: 100% p.em(64);
+		border: p.rem(1) solid var(--border-line-2);
+		border-radius: p.rem(4);
+
+		code {
+			padding: 0;
+			white-space: pre-wrap;
+			background-color: transparent;
+		}
+	}
+
+	table {
+		margin-bottom: p.rem(18);
+		border-collapse: collapse;
+
+		@include p.breakpoint-down(small) {
+			font-size: p.rem(8);
+		}
+
+		thead > tr > th {
+			background-color: var(--color-white);
+		}
+
+		tr,
+		th,
+		td {
+			padding: p.rem(8);
+			line-height: p.rem(23);
+			text-align: left;
+			border-bottom-width: p.rem(2);
+			border: p.rem(1) solid var(--border-line-1);
+		}
+
+		tr:nth-child(odd) {
+			background-color: var(--td-background);
+		}
+	}
+}
